@@ -254,3 +254,21 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.536
+!MESSAGE Preparing classpath changed notification Pokemon
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.536
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.538
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.540
+!MESSAGE buffering callback sts4.classpath.vGVgbBPv Pokemon false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.541
+!MESSAGE executing callback sts4.classpath.vGVgbBPv 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-30 15:44:21.548
+!MESSAGE executing callback sts4.classpath.vGVgbBPv SUCCESS [done]
