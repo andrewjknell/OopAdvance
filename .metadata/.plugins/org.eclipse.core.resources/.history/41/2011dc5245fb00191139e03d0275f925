@@ -1,0 +1,11 @@
+package com.oopproject.objproject;
+
+public class Ninja extends Human {
+	public Ninja() {
+		super();
+		stealth = 10;
+	}
+	public void display() {
+		System.out.print(stealth);
+	}
+}

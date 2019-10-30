@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\andre\OneDrive\Coding_Dojo\JAVA\JavaSpring\.metadata\.plugins\org.eclipse.jdt.core
+3294775327.index
+422488386.index

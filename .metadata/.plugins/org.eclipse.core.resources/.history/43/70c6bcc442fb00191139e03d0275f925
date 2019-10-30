@@ -1,0 +1,13 @@
+package com.oopproject.objproject;
+
+public class HumanTest {
+
+	public static void main(String[] args) {
+		Human h = new Human();
+		Human i = new Human();
+		h.attack(i);
+		h.attack(i);
+		h.attack(i);
+}
+
+}

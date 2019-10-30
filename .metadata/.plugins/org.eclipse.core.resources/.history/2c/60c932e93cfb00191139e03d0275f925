@@ -1,0 +1,5 @@
+package com.oopproject.zookeeper;
+
+public class Mammal {
+
+}
