@@ -10,27 +10,16 @@ public class BankAccount {
 	private static double total;
 	
 	public BankAccount() {
-		accountNum = setActNum();
+		accountNum = randActNum();
 		accts++;
-		
 	}
 	
-	public static int actT() {
-		System.out.println(accts+ " accounts");
-		return accts;
-	}
 	public void setCheck(double n) {
 		checkBal = n;
-		total += n;
 	}
 	
 	public void setSav(double n) {
 		savBal = n;
-		total += n;
-	}
-	
-	public static void totall() {
-		System.out.println(total);
 	}
 	
 	private String setActNum() {	
@@ -46,21 +35,4 @@ public class BankAccount {
 		return accountNum;
 	}
 	
-	public double getCheckBal() {
-		return checkBal;
-	}
-	
-	public double getSavBal() {
-		return savBal;
-	}
-	
-	public void addSav(double num) {
-		savBal += num;
-		total += num;
-	}
-	
-	public void addCheck(double num) {
-		checkBal += num;
-		total += num;
-	}
 }

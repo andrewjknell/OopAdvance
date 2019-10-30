@@ -1,0 +1,18 @@
+package com.oopadvanced.bankaaccount;
+
+public class BankAccountTest {
+
+	public static void main(String[] args) {
+		BankAccount bank1 = new BankAccount();
+		BankAccount bank2 = new BankAccount();
+		
+		bank1.setCheck(0);
+		bank1.setSav(100);		
+		bank2.setCheck(0);
+		bank2.setSav(100);
+		
+		System.out.println(bank1.getCheckBal());
+		
+	}
+
+}

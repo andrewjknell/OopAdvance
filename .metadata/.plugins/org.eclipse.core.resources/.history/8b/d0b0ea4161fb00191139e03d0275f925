@@ -12,7 +12,7 @@ public class BankAccount {
 	public BankAccount() {
 		accountNum = setActNum();
 		accts++;
-		
+		total = checkBal + savBal;
 	}
 	
 	public static int actT() {
@@ -21,12 +21,10 @@ public class BankAccount {
 	}
 	public void setCheck(double n) {
 		checkBal = n;
-		total += n;
 	}
 	
 	public void setSav(double n) {
 		savBal = n;
-		total += n;
 	}
 	
 	public static void totall() {
@@ -56,11 +54,9 @@ public class BankAccount {
 	
 	public void addSav(double num) {
 		savBal += num;
-		total += num;
 	}
 	
 	public void addCheck(double num) {
 		checkBal += num;
-		total += num;
 	}
 }
