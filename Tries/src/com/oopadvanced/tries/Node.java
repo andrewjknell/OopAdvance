@@ -10,7 +10,4 @@ public class Node {
         this.isWord = false;
     }
     
-    public Character getChar(int x) {
-    	return this.children.;
-    }
 }

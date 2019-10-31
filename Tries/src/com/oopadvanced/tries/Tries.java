@@ -1,5 +1,4 @@
 package com.oopadvanced.tries;
-import java.util.*;
 
 public class Tries {
     public Node root;

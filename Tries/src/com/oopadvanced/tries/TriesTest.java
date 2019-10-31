@@ -1,5 +1,4 @@
 package com.oopadvanced.tries;
-import java.util.*;
 
 public class TriesTest {
     public static void main(String[] args) {
