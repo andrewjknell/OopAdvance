@@ -11,9 +11,12 @@ public class PhoneTest {
 		System.out.println(s9.unlock());
 
 		ten.displayInfo();
-		System.out.println(s9.ring());
-		System.out.println(s9.unlock());		
 		
+		
+		
+		System.out.println(s9.ring());
+		System.out.println(s9.unlock());			
 	}
-
 }
+
+
