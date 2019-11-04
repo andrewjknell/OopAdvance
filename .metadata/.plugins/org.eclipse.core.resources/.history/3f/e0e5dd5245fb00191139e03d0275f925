@@ -1,5 +1,0 @@
-package com.oopproject.objproject;
-
-public class Samurai extends Human{
-
-}
