@@ -9,19 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.codingdojo.web.models.Person;
+import com.codingdojo.web.models.Cat;
+import com.codingdojo.web.models.Dog;
 
 /**
- * Servlet implementation class ShowPerson
+ * Servlet implementation class Dogs
  */
-@WebServlet("/ShowPerson")
-public class ShowPerson extends HttpServlet {
+@WebServlet("/Dogs")
+public class Dogs extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ShowPerson() {
+    public Dogs() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,17 +31,15 @@ public class ShowPerson extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 // Process Request:
-        String name = request.getParameter("name");
-        int age = Integer.parseInt(request.getParameter("age"));
-        // Create model
-        Person person = new Person(name, age);
-        // Set Model for view
-        request.setAttribute("person", person);
-        // Let view handle the request
-        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/ShowPerson.jsp");
+		String name = request.getParameter("name");
+		String breed = request.getParameter("breed");
+		int weight = Integer.parseInt(request.getParameter("weight"));
+		
+		Dog dog = new Dog(name, breed, weight);
+		request.setAttribute("dog", dog);
+
+        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/dog.jsp");
         view.forward(request, response);
-        
 	}
 
 	/**
