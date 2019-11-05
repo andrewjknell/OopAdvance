@@ -8,31 +8,37 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.codingdojo.web.models.Cat;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Cats
+ * Servlet implementation class Count
  */
-@WebServlet("/Cats")
-public class Cats extends HttpServlet {
+@WebServlet("/Count")
+public class Count extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
-    public Cats() {
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Count() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = request.getParameter("name");
-		String breed = request.getParameter("breed");
-		int weight = Integer.parseInt(request.getParameter("weight"));
-		
-		Cat cat = new Cat(name, breed, weight);
-		request.setAttribute("cat", cat);
+        HttpSession session = request.getSession();
+		Integer counter = (Integer)session.getAttribute("seshCount");
+		if(counter == null) {
+			session.setAttribute("seshCount", 0);
+		}
+		else {
+			counter = counter +1;
+			session.setAttribute("seshCount", counter);
+		}
+		request.setAttribute("seshCount", counter);
 
-        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/cat.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
         view.forward(request, response);
 	}
 

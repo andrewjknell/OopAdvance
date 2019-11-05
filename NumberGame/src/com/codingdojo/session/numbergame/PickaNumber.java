@@ -1,4 +1,4 @@
-package com.codingdojo.web.controllers;
+package com.codingdojo.session.numbergame;
 
 import java.io.IOException;
 
@@ -9,37 +9,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.codingdojo.web.models.Cat;
-
 /**
- * Servlet implementation class Cats
+ * Servlet implementation class PickaNumber
  */
-@WebServlet("/Cats")
-public class Cats extends HttpServlet {
+@WebServlet("/home")
+public class PickaNumber extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
-    public Cats() {
+
+    public PickaNumber() {
         super();
+        
     }
 
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = request.getParameter("name");
-		String breed = request.getParameter("breed");
-		int weight = Integer.parseInt(request.getParameter("weight"));
 		
-		Cat cat = new Cat(name, breed, weight);
-		request.setAttribute("cat", cat);
-
-        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/cat.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
         view.forward(request, response);
+
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
+        String name = request.getParameter("name");
+        
+        request.setAttribute("name", name);
+        RequestDispatcher view = request.getRequestDispatcher("home.jsp");
+        view.forward(request, response);
 	}
 
 }
